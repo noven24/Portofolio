@@ -53,11 +53,11 @@ const home: Home = {
         <strong className="ml-4">Featured Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Medical Cost Prediction
+          Google Student Ambassador
         </Text>
       </Row>
     ),
-    href: "/work/medical-cost-prediction",
+    href: "/work/google-student-ambassador",
   },
   subline: (
     <>
