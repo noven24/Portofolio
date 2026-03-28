@@ -170,24 +170,46 @@ export default function About() {
                     item.link && (
                       <React.Fragment key={item.name}>
                         <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
+                          {item.link.startsWith("mailto:") ? (
+                            <a href={item.link} style={{ textDecoration: "none" }}>
+                              <Button
+                                prefixIcon={item.icon}
+                                label={item.name}
+                                size="s"
+                                weight="default"
+                                variant="secondary"
+                              />
+                            </a>
+                          ) : (
+                            <Button
+                              key={item.name}
+                              href={item.link}
+                              prefixIcon={item.icon}
+                              label={item.name}
+                              size="s"
+                              weight="default"
+                              variant="secondary"
+                            />
+                          )}
                         </Row>
                         <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
+                          {item.link.startsWith("mailto:") ? (
+                            <a href={item.link} style={{ textDecoration: "none" }}>
+                              <IconButton
+                                size="l"
+                                icon={item.icon}
+                                variant="secondary"
+                              />
+                            </a>
+                          ) : (
+                            <IconButton
+                              size="l"
+                              key={`${item.name}-icon`}
+                              href={item.link}
+                              icon={item.icon}
+                              variant="secondary"
+                            />
+                          )}
                         </Row>
                       </React.Fragment>
                     ),

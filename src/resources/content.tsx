@@ -2,56 +2,41 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Noven",
+  lastName: "Fauzian",
+  name: "Dianwan Noven Nur Fauzian",
+  role: "Informatics Engineering Student & AI Enthusiast",
+  avatar: "/images/avatar-baru.jpg",
+  email: "dianwannovennf@gmail.com",
+  location: "Asia/Jakarta", // Purbalingga timezone
+  languages: ["English", "Bahasa Indonesia"],
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>Subscribe to {person.firstName}'s Updates</>,
+  description: <>Stay updated with my latest projects and AI insights.</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/novennf/",
     essential: true,
   },
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `https://mail.google.com/mail/?view=cm&fs=1&to=${person.email}`,
     essential: true,
   },
+  {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/novennf/",
+    essential: true,
+  }
 ];
 
 const home: Home = {
@@ -59,25 +44,25 @@ const home: Home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio website showcasing my work as an ${person.role}`,
+  headline: <>Translating complex AI concepts into practical applications.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Featured Project</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Medical Cost Prediction
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/medical-cost-prediction",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Noven, an Informatics Engineering student passionate about Artificial Intelligence and tech ecosystems. I build, engage, and lead dynamic AI communities.
+    </>
   ),
 };
 
@@ -85,148 +70,130 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
+  description: `Meet ${person.name}, ${person.role} from Purbalingga, Central Java`,
+  tableOfContent: { display: true, subItems: false },
+  avatar: { display: true },
+  calendar: { display: false, link: "https://cal.com" },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I believe technology is only as powerful as the people who can understand it. I'm Noven, an Informatics Engineering student specializing in AI and Data ecosystems. My expertise goes beyond just Python and data analysis; it's about bridging the gap between heavy technical frameworks and everyday users. My ultimate goal is to build AI solutions that genuinely help and improve people's lives. Whether I'm developing intelligent applications or driving community tech initiatives, I am eager to shape the future of accessible AI.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Work Experience & Projects",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Pijak in collaboration with IBM SkillsBuild",
+        timeframe: "February 2026 - Present",
+        role: "Student Intern | AI Engineer Learning Path",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          <>Completed a comprehensive AI engineering curriculum via IBM SkillsBuild, mastering core concepts in machine learning, data science, and artificial intelligence.</>,
+          <>Gained hands-on experience using Python to process datasets, train predictive models, and evaluate algorithmic performance for real-world scenarios.</>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Google | Universitas Muhammadiyah Purwokerto",
+        timeframe: "September 2025 - December 2025",
+        role: "Google Student Ambassador",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>Served as the main point of contact between students, faculty, and Google teams, presenting Google technologies at various campus events.</>,
+          <>Achieved a Top 100 ranking among 800 Google Student Ambassadors nationwide by actively driving student engagement and tech initiatives.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "ASEAN Foundation",
+        timeframe: "September 2025 - September 2026",
+        role: "Master Trainer AI Ready ASEAN",
+        achievements: [
+          <>Delivered training sessions on Fundamentals of Generative AI, AI Ethics & Safety, and AI applications for digital literacy.</>,
+          <>Prepared structured learning materials and conducted technical documentation to support training delivery.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Orbit Future Academy",
+        timeframe: "August 2025 - November 2025",
+        role: "AWS re/Start Cloud Computing Cohort",
+        achievements: [
+          <>Completed an intensive cloud computing training program covering Linux OS, Python, networking, security, and databases.</>,
+          <>Gained hands-on experience in provisioning, configuring, and managing core AWS services including EC2, S3, IAM, VPC, and RDS.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Independent Project",
+        timeframe: "April 2025",
+        role: "Medical Cost Prediction Project",
+        achievements: [
+          <>Built a regression model to predict medical costs to assist health insurance providers in setting premiums.</>,
+          <>Trained and evaluated several machine learning models, with a Random Forest Regressor achieving an excellent R2 score of approximately 0.92.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Mars Computer",
+        timeframe: "November 2022 - April 2023",
+        role: "Data Entry Intern",
+        achievements: [
+          <>Input total income and sold items from customer receipts into Excel.</>,
+          <>Save and archive documents related to the entered data for easy future access.</>,
+          <>Create reports or summaries from the entered data for further analysis.</>,
+          <>Upload product content for sale on the marketplace.</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education Level",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universitas Muhammadiyah Purwokerto",
+        description: <>Informatics Engineering (GPA: 3.78) | August 2024 - Present<br/>Developed a store invoicing application using conditional concepts in C#.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "SMK YPT 1 Purbalingga",
+        description: <>Computer and Network Engineering (Final Score: 85) | July 2021 - May 2024<br/>Built websites (Front-End) and created an LED Running Text Display using Arduino.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Skills & Specializations",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Artificial Intelligence & Data Science",
+        description: <>Python, Machine Learning, Predictive Modeling, Exploratory Data Analysis, Model Evaluation, Generative AI.</>,
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Python", icon: "code" },
+          { name: "Machine Learning", icon: "globe" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Cloud & Databases",
+        description: <>AWS (EC2, S3, RDS), SQL, Google BigQuery, Linux Operating Systems.</>,
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "AWS", icon: "database" },
+          { name: "SQL", icon: "database" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Leadership & Communication",
+        description: <>Public Speaking, Training & Facilitation, Curriculum Development, Technical Writing.</>,
+        tags: [
+          { name: "Training", icon: "person" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,70 +202,24 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writings on AI & Technology...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  title: `Work & Leadership – ${person.name}`,
+  description: `AI and Dev projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  label: "Creatives",
+  title: `Activity gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  images: [],
+  instagramPostIds: ["DRvo286iaz0","DS2MA3Wk4Bm","DS1yE31EwTs","DO09xAxCQxE", "DPIVQEBCRFQ", "DQULV2Tk7mp","DSQkC3Bk9mr","DS0ekWyExkd", "DR8VulbExQK", "DRcmmxkCWIg", "DRZ1hmRCW-r","DPbka5lic5n"], // Replace this with your own Instagram Post IDs
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

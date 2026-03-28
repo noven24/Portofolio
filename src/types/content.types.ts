@@ -237,4 +237,6 @@ export interface Gallery extends BasePageConfig {
     /** Image orientation (horizontal/vertical) */
     orientation: string;
   }>;
+  /** List of Instagram post links/IDs */
+  instagramPostIds?: string[];
 }
